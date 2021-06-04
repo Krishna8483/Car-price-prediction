@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+</style>
+<body>
+
+<h2>Heart failure prediction</h2>
+
+<form action="{{url_for('predict')}}" method="post">
+  <label for="age">Age:</label><br>
+  <input type="number" id="age" name="age" ><br>
+
+
+
+  <label for="anaemia">Anaemia:</label>
+  <select id="anaemia" name="anaemia">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+  </select><br><br>
+  <label for="creatinine_phosphokinase">Creatinine Phosphokinase:</label><br>
+  <input type="number" id="creatinine_phosphokinase" name="creatinine_phosphokinase">
+
+
+  <label for="diabetes">Diabetes:</label>
+  <select id="diabetes" name="diabetes">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+  </select><br><br>
+
+
+
+
+
+
+  <label for="ejection_fraction">Ejection Fraction:</label><br>
+  <input type="number" id="ejection_fraction" name="ejection_fraction" ><br><br>
+
+
+  <label for="high blood pressure">High Blood Pressure:</label>
+  <select id="high blood pressure" name="high blood pressure">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+  </select><br><br>
+
+
+
+
+
+   <label for="platelets">Platelets:</label><br>
+  <input type="number" id="platelets" name="platelets" ><br><br>
+
+   <label for="serum creatinine">Serum Creatinine:</label><br>
+  <input type="number" id="serum creatinine" name="serum_creatinine" ><br><br>
+
+
+  <label for="serum sodium">Serum Sodium:</label><br>
+  <input type="number" id="Serum sodium" name="Serum sodium" ><br><br>
+
+
+ <label for="sex">Gender:</label>
+  <select id="sex" name="sex">
+    <option value="FeMale">Female</option>
+    <option value="Male">Male</option>
+
+  </select>
+
+<label for="smoking">Smoking:</label>
+  <select id="smoking" name="smoking">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+  </select>
+
+
+
+
+
+
+  <br><br><button id="sub" type="submit ">Predict</button>
+            <br>
+
+  <br><br><h2>{{prediction_text}}</h2>
+</form>
+
+
+
+</body>
+</html>
